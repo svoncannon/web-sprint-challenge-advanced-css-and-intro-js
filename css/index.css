@@ -134,3 +134,34 @@ button:hover{
 .artist img{
     width:100%;
 }
+
+@media(max-width:500px){
+    nav{
+        width:50%;
+    }
+    .title-container div{
+        width:100%;
+        height:50vh;
+    }
+    .artists-container{
+        width:100%;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+    
+    }
+    .artist{
+        width:65%;
+    }
+    .artist img{
+        height:30vh;
+     
+    }
+    .bio{
+        width:100%;
+        font-size:1.1rem;
+
+    }
+ 
+ 
+    }
