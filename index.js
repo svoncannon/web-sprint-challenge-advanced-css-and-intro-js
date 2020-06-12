@@ -233,16 +233,25 @@ console.log(getArtistByIndex(artists, 3))
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who lived in the 20th century (1900-2000) */
-const artist20s = []
 
-function get20s(arr, year){
-  for (i = 0; i <= arr.length-1; i++){
-   if(arr[i].years >= year)
-    artist20s.push(arr);
-  }
+ const newarry = [];
+function get20s(arr, string, newarr){
+ console.log(arr)
+  for (i = 0; i < arr.length; i++){
+    if(arr[i].years.includes(string)){
+      newarr.push(arr[i]);
+    }
+  }return newarry
+ 
+
+  // for (i = 0; i < arr.length; i++){
+  //  if(arr[i].includes(string)){
+  //   newarr.push(arr[i]);
+  //   }
+  // }return newarr;
 }
-get20s(artists, 1900)
-console.log(artist20s);
+
+console.log(get20s(artists, `19`, newarry))
 
 
 
@@ -278,12 +287,12 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should console.log() the new array with information added"*/
 
-function addArtist(arr, id, name, years, genre, nationality, bio){
+function addArtist(arr, id, name, years, genre, nationality, bio, paintings){
 
-    arr.push({id, name, years, genre, nationality, bio});
+    arr.push({id, name, years, genre, nationality, bio, paintings});
     return arr
 
-  }console.log(addArtist(artists, `21`, `Samantha`, `1991 - 2020`, `Web Design`, `German`, `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`))
+  }console.log(addArtist(artists, `21`, `Samantha`, `1991 - 2020`, `Web Design`, `German`, `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`, 50))
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -294,10 +303,11 @@ and returns an array with names of artists who painted more than 100 paintings.
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 const artist100 = []
 function lotsOfArt(arr){
-  for (i = 0; i <= arr.length-1; i++){
-  
-    if(arr.paintings >= 100)
-    artist100.push(arr);
+  console.log(arr)
+  for (i = 0; i < arr.length; i++){
+  console.log(arr[i].paintings)
+    if(arr[i].paintings >100){
+    artist100.push(arr[i].name);}
   }
 
 }
